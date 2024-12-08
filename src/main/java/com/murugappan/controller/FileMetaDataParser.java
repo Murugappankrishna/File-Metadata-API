@@ -24,6 +24,6 @@ public class FileMetaDataParser {
     @GetMapping("/")
     @CrossOrigin(origins = "*")
     public String home() {
-        return "redirect:/index.html";
+        return "index.html";
     }
 }
