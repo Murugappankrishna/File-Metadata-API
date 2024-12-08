@@ -9,10 +9,9 @@ import java.util.HashMap;
 import java.util.Map;
 @Controller
 @RestController
-@RequestMapping("/api")
 @CrossOrigin(origins = "*")
 public class FileMetaDataParser {
-    @PostMapping("/fileanalyse")
+    @PostMapping("/api/fileanalyse")
     @ResponseBody
     public ResponseDTO handleFileUpload(@RequestParam("upfile") MultipartFile file) {
             ResponseDTO response = new ResponseDTO();
@@ -24,6 +23,6 @@ public class FileMetaDataParser {
     @GetMapping("/")
     @CrossOrigin(origins = "*")
     public String home() {
-        return "index.html";
+        return "<p> Vanakam form home</p>";
     }
 }
