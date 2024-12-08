@@ -13,9 +13,13 @@ public class FileMetaDataParser {
     @PostMapping("/fileanalyse")
     public ResponseDTO handleFileUpload(@RequestParam("upfile") MultipartFile file) {
             ResponseDTO response = new ResponseDTO();
-            response.setName(file.getOriginalFilename());
+           response.setName(file.getOriginalFilename());
             response.setSize((int)file.getSize());
             response.setType(file.getContentType());
         return response;
+    }
+    @GetMapping("/")
+    public String home() {
+        return "redirect:/index.html";
     }
 }
